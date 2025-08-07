@@ -1,4 +1,5 @@
 utils/RetryAnalyzer.class
+stepdefs/AddToCartSteps.class
 runners/TestRunner.class
 hooks/StepListener.class
 utils/RetryListener.class
