@@ -1,12 +1,4 @@
 -------------------------------------------------------------------------------
 Test set: runners.TestRunner
 -------------------------------------------------------------------------------
-Tests run: 1, Failures: 1, Errors: 0, Skipped: 0, Time elapsed: 5.426 s <<< FAILURE! -- in runners.TestRunner
-runners.TestRunner.runScenario["Successful login with valid credentials", "Sauce Demo Login"](1) -- Time elapsed: 5.005 s <<< FAILURE!
-java.lang.AssertionError: Force failure to check retry mechanism expected [true] but found [false]
-	at org.testng.Assert.fail(Assert.java:111)
-	at org.testng.Assert.failNotEquals(Assert.java:1590)
-	at org.testng.Assert.assertTrue(Assert.java:57)
-	at stepdefs.LoginSteps.should_be_on_product_page(LoginSteps.java:41)
-	at ✽.User should be navigated to the products page(file:///Users/zop8764/Documents/Repo/saucedemo-automation/src/test/resources/features/Login.feature:8)
-
+Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 4.356 s -- in runners.TestRunner

@@ -2,17 +2,21 @@ package hooks;
 
 import com.aventstack.extentreports.ExtentReports;
 import com.aventstack.extentreports.ExtentTest;
-import com.aventstack.extentreports.MediaEntityBuilder;
 import com.aventstack.extentreports.Status;
 import io.cucumber.java.After;
 import io.cucumber.java.Before;
 import io.cucumber.java.Scenario;
+import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.OutputType;
 import org.openqa.selenium.TakesScreenshot;
 import org.openqa.selenium.WebDriver;
 import utils.DriverFactory;
 import utils.ExtentReportManager;
 import utils.LoggerUtil;
+
+import java.time.Duration;
+
+import org.openqa.selenium.support.ui.WebDriverWait;
 
 public class Hooks {
 
@@ -23,6 +27,13 @@ public class Hooks {
     @Before
     public void setUp(Scenario scenario) {
         driver = DriverFactory.initDriver();
+
+        driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(10));
+
+        // Wait until DOM is fully loaded
+        new WebDriverWait(driver, Duration.ofSeconds(10)).until(
+                d -> ((JavascriptExecutor) d).executeScript("return document.readyState").equals("complete")
+        );
 
         if (extent == null) {
             extent = ExtentReportManager.createInstance();
@@ -41,15 +52,12 @@ public class Hooks {
         ExtentTest test = scenarioThread.get();
 
         if (scenario.isFailed()) {
-            byte[] screenshot = ((TakesScreenshot) DriverFactory.getDriver()).getScreenshotAs(OutputType.BYTES);
-            String base64Screenshot = ((TakesScreenshot) DriverFactory.getDriver()).getScreenshotAs(OutputType.BASE64);
-
-            // Attach screenshot to Cucumber HTML report
-            scenario.attach(screenshot, "image/png", "Failed Screenshot");
-
-            // Attach to Extent Report
-            test.fail("Scenario failed: " + scenario.getName(),
-                    MediaEntityBuilder.createScreenCaptureFromBase64String(base64Screenshot, "Failed Screenshot").build()
+            byte[] screenshot = ((TakesScreenshot) DriverFactory.getDriver())
+                    .getScreenshotAs(OutputType.BYTES);
+            scenario.attach(screenshot, "image/png", scenario.getName());
+            test.fail("Scenario failed").addScreenCaptureFromBase64String(
+                    ((TakesScreenshot) DriverFactory.getDriver()).getScreenshotAs(OutputType.BASE64),
+                    scenario.getName()
             );
         } else {
             test.pass("Scenario passed");
