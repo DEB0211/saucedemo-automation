@@ -2,6 +2,7 @@ package hooks;
 
 import com.aventstack.extentreports.ExtentReports;
 import com.aventstack.extentreports.ExtentTest;
+import com.aventstack.extentreports.MediaEntityBuilder;
 import com.aventstack.extentreports.Status;
 import io.cucumber.java.After;
 import io.cucumber.java.Before;
@@ -11,6 +12,7 @@ import org.openqa.selenium.TakesScreenshot;
 import org.openqa.selenium.WebDriver;
 import utils.DriverFactory;
 import utils.ExtentReportManager;
+import utils.LoggerUtil;
 
 public class Hooks {
 
@@ -31,6 +33,7 @@ public class Hooks {
         ExtentTest test = extent.createTest(scenarioName + " " + tags);
         test.info("Scenario Started: " + scenarioName);
         scenarioThread.set(test);
+        LoggerUtil.threadLocalTest.set(test);
     }
 
     @After
@@ -38,12 +41,15 @@ public class Hooks {
         ExtentTest test = scenarioThread.get();
 
         if (scenario.isFailed()) {
-            byte[] screenshot = ((TakesScreenshot) DriverFactory.getDriver())
-                    .getScreenshotAs(OutputType.BYTES);
-            scenario.attach(screenshot, "image/png", scenario.getName());
-            test.fail("Scenario failed").addScreenCaptureFromBase64String(
-                    ((TakesScreenshot) DriverFactory.getDriver()).getScreenshotAs(OutputType.BASE64),
-                    scenario.getName()
+            byte[] screenshot = ((TakesScreenshot) DriverFactory.getDriver()).getScreenshotAs(OutputType.BYTES);
+            String base64Screenshot = ((TakesScreenshot) DriverFactory.getDriver()).getScreenshotAs(OutputType.BASE64);
+
+            // Attach screenshot to Cucumber HTML report
+            scenario.attach(screenshot, "image/png", "Failed Screenshot");
+
+            // Attach to Extent Report
+            test.fail("Scenario failed: " + scenario.getName(),
+                    MediaEntityBuilder.createScreenCaptureFromBase64String(base64Screenshot, "Failed Screenshot").build()
             );
         } else {
             test.pass("Scenario passed");

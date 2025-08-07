@@ -1,5 +1,6 @@
 utils/TestUtils.class
 utils/ConfigReader.class
 utils/ExtentReportManager.class
+utils/LoggerUtil.class
 pages/LoginPage.class
 utils/DriverFactory.class
