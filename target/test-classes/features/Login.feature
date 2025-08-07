@@ -8,7 +8,7 @@ Feature: Login functionality
     When user logs out
     Then user should be back on the login page
 
-  @reg @login @negative
+  @smoke @login @negative
   Scenario: Invalid login attempt
     Given user is on the login page
     When user logs in with invalid credentials
