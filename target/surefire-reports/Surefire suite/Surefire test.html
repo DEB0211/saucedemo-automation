@@ -57,9 +57,9 @@ function toggleAllBoxes() {
 <tr>
 <td>Tests passed/Failed/Skipped:</td><td>0/1/0</td>
 </tr><tr>
-<td>Started on:</td><td>Thu Aug 07 21:26:37 IST 2025</td>
+<td>Started on:</td><td>Thu Aug 07 22:23:32 IST 2025</td>
 </tr>
-<tr><td>Total time:</td><td>4 seconds (4770 ms)</td>
+<tr><td>Total time:</td><td>4 seconds (4616 ms)</td>
 </tr><tr>
 <td>Included groups:</td><td></td>
 </tr><tr>
@@ -83,9 +83,9 @@ For documentation on this error, please visit: https://www.selenium.dev/document
 Build info: version: &apos;4.34.0&apos;, revision: &apos;707dcb4246*&apos;
 System info: os.name: &apos;Mac OS X&apos;, os.arch: &apos;aarch64&apos;, os.version: &apos;15.4&apos;, java.version: &apos;21.0.7&apos;
 Driver info: org.openqa.selenium.chrome.ChromeDriver
-Command: [bc697135b100c77d12a247f97b3b34ab, findElement {value=title, using=class name}]
-Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 138.0.7204.184, chrome: {chromedriverVersion: 138.0.7204.183 (e90faf484dd..., userDataDir: /var/folders/jn/kx5xb23j17j...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:52028}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: mac, proxy: Proxy(), se:cdp: ws://localhost:52028/devtoo..., se:cdpVersion: 138.0.7204.184, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
-Session ID: bc697135b100c77d12a247f97b3b34ab
+Command: [3a24df8c17a29af231dff1a206c952b0, findElement {using=class name, value=title}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 138.0.7204.184, chrome: {chromedriverVersion: 138.0.7204.183 (e90faf484dd..., userDataDir: /var/folders/jn/kx5xb23j17j...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:51957}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: mac, proxy: Proxy(), se:cdp: ws://localhost:51957/devtoo..., se:cdpVersion: 138.0.7204.184, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: 3a24df8c17a29af231dff1a206c952b0
 	at org.openqa.selenium.remote.ErrorCodec.decode(ErrorCodec.java:167)
 	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:138)
 	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:50)
@@ -98,18 +98,18 @@ Session ID: bc697135b100c77d12a247f97b3b34ab
 	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:367)
 	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:361)
 	at pages.LoginPage.isOnProductPage(LoginPage.java:31)
-	at stepdefs.LoginSteps.should_be_on_product_page(LoginSteps.java:36)
+	at stepdefs.LoginSteps.should_be_on_product_page(LoginSteps.java:41)
 	at ✽.User should be navigated to the products page(file:///Users/zop8764/Documents/Repo/saucedemo-automation/src/test/resources/features/Login.feature:8)
-... Removed 3 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace423095039", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
-<div class='stack-trace' id='stack-trace423095039'><pre>org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {&quot;method&quot;:&quot;css selector&quot;,&quot;selector&quot;:&quot;.title&quot;}
+... Removed 3 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace408388753", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace408388753'><pre>org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {&quot;method&quot;:&quot;css selector&quot;,&quot;selector&quot;:&quot;.title&quot;}
   (Session info: chrome=138.0.7204.184)
 For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#no-such-element-exception
 Build info: version: &apos;4.34.0&apos;, revision: &apos;707dcb4246*&apos;
 System info: os.name: &apos;Mac OS X&apos;, os.arch: &apos;aarch64&apos;, os.version: &apos;15.4&apos;, java.version: &apos;21.0.7&apos;
 Driver info: org.openqa.selenium.chrome.ChromeDriver
-Command: [bc697135b100c77d12a247f97b3b34ab, findElement {value=title, using=class name}]
-Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 138.0.7204.184, chrome: {chromedriverVersion: 138.0.7204.183 (e90faf484dd..., userDataDir: /var/folders/jn/kx5xb23j17j...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:52028}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: mac, proxy: Proxy(), se:cdp: ws://localhost:52028/devtoo..., se:cdpVersion: 138.0.7204.184, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
-Session ID: bc697135b100c77d12a247f97b3b34ab
+Command: [3a24df8c17a29af231dff1a206c952b0, findElement {using=class name, value=title}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 138.0.7204.184, chrome: {chromedriverVersion: 138.0.7204.183 (e90faf484dd..., userDataDir: /var/folders/jn/kx5xb23j17j...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:51957}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: mac, proxy: Proxy(), se:cdp: ws://localhost:51957/devtoo..., se:cdpVersion: 138.0.7204.184, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: 3a24df8c17a29af231dff1a206c952b0
 	at java.base/jdk.internal.reflect.DirectConstructorHandleAccessor.newInstance(DirectConstructorHandleAccessor.java:62)
 	at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:502)
 	at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:486)
@@ -125,11 +125,11 @@ Session ID: bc697135b100c77d12a247f97b3b34ab
 	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:367)
 	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:361)
 	at pages.LoginPage.isOnProductPage(LoginPage.java:31)
-	at stepdefs.LoginSteps.should_be_on_product_page(LoginSteps.java:36)
+	at stepdefs.LoginSteps.should_be_on_product_page(LoginSteps.java:41)
 	at ✽.User should be navigated to the products page(file:///Users/zop8764/Documents/Repo/saucedemo-automation/src/test/resources/features/Login.feature:8)
 </pre></div></td>
 <td>4</td>
-<td>runners.TestRunner@20d28811</td></tr>
+<td>runners.TestRunner@48aaecc3</td></tr>
 </table><p>
 </body>
 </html>

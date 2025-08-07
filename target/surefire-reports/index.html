@@ -136,9 +136,9 @@ For documentation on this error, please visit: https://www.selenium.dev/document
 Build info: version: &apos;4.34.0&apos;, revision: &apos;707dcb4246*&apos;
 System info: os.name: &apos;Mac OS X&apos;, os.arch: &apos;aarch64&apos;, os.version: &apos;15.4&apos;, java.version: &apos;21.0.7&apos;
 Driver info: org.openqa.selenium.chrome.ChromeDriver
-Command: [bc697135b100c77d12a247f97b3b34ab, findElement {value=title, using=class name}]
-Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 138.0.7204.184, chrome: {chromedriverVersion: 138.0.7204.183 (e90faf484dd..., userDataDir: /var/folders/jn/kx5xb23j17j...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:52028}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: mac, proxy: Proxy(), se:cdp: ws://localhost:52028/devtoo..., se:cdpVersion: 138.0.7204.184, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
-Session ID: bc697135b100c77d12a247f97b3b34ab
+Command: [3a24df8c17a29af231dff1a206c952b0, findElement {using=class name, value=title}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 138.0.7204.184, chrome: {chromedriverVersion: 138.0.7204.183 (e90faf484dd..., userDataDir: /var/folders/jn/kx5xb23j17j...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:51957}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: mac, proxy: Proxy(), se:cdp: ws://localhost:51957/devtoo..., se:cdpVersion: 138.0.7204.184, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: 3a24df8c17a29af231dff1a206c952b0
 	at org.openqa.selenium.remote.ErrorCodec.decode(ErrorCodec.java:167)
 	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:138)
 	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:50)
@@ -151,7 +151,7 @@ Session ID: bc697135b100c77d12a247f97b3b34ab
 	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:367)
 	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:361)
 	at pages.LoginPage.isOnProductPage(LoginPage.java:31)
-	at stepdefs.LoginSteps.should_be_on_product_page(LoginSteps.java:36)
+	at stepdefs.LoginSteps.should_be_on_product_page(LoginSteps.java:41)
 	at ✽.User should be navigated to the products page(file:///Users/zop8764/Documents/Repo/saucedemo-automation/src/test/resources/features/Login.feature:8)
 ... Removed 3 stack frames
 </div> <!-- stack-trace -->
@@ -224,7 +224,7 @@ data.addRows(1);
 data.setCell(0, 0, 0)
 data.setCell(0, 1, 'runScenario')
 data.setCell(0, 2, 'runners.TestRunner')
-data.setCell(0, 3, 4498);
+data.setCell(0, 3, 4376);
 window.suiteTableData['Surefire_suite']= { tableData: data, tableDiv: 'times-div-Surefire_suite'}
 return data;
 }
@@ -257,18 +257,18 @@ return data;
             <div class="chronological-class">
               <div class="chronological-class-name">runners.TestRunner</div> <!-- chronological-class-name -->
               <div class="configuration-class before">
-                <span class="method-name">setUpClass(org.testng.TestRunner@21ba2445)</span>
+                <span class="method-name">setUpClass(org.testng.TestRunner@1dbd580)</span>
                 <span class="method-start">0 ms</span>
               </div> <!-- configuration-class before -->
               <div class="test-method">
                 <img src="failed.png">
                 </img>
                 <span class="method-name">runScenario("Successful login with valid credentials", "Sauce Demo Login")</span>
-                <span class="method-start">250 ms</span>
+                <span class="method-start">221 ms</span>
               </div> <!-- test-method -->
               <div class="configuration-class after">
                 <span class="method-name">tearDownClass</span>
-                <span class="method-start">4752 ms</span>
+                <span class="method-start">4600 ms</span>
               </div> <!-- configuration-class after -->
           </div> <!-- main-panel-content rounded-window-bottom -->
         </div> <!-- panel -->
