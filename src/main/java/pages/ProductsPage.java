@@ -2,65 +2,35 @@ package pages;
 
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
-import org.openqa.selenium.support.ui.ExpectedConditions;
-import org.openqa.selenium.support.ui.WebDriverWait;
-
-import java.time.Duration;
 
 public class ProductsPage {
     private final WebDriver driver;
-    private final WebDriverWait wait;
+    private final By inventoryItem = By.cssSelector(".inventory_item");
+    private final By firstAddToCart = By.cssSelector(".inventory_item:first-of-type button.btn_inventory");
+    private final By cartIcon = By.id("shopping_cart_container");
+    private final By checkoutBtn = By.id("checkout"); // on cart page
 
-    // Products page
-    private final By productsHeader = By.cssSelector(".title"); // "Products"
-    private final By firstAddToCartBtn = By.cssSelector("button.btn_inventory");
-    private final By cartIcon = By.className("shopping_cart_link");
-    private final By cartBadge = By.className("shopping_cart_badge");
+    public ProductsPage(WebDriver driver) { this.driver = driver; }
 
-    // Cart page
-    private final By checkoutButton = By.id("checkout");
-
-    // Menu/logout
-    private final By menuButton = By.id("react-burger-menu-btn");
-    private final By logoutLink = By.id("logout_sidebar_link");
-
-    // Login page (post-logout)
-    private final By loginButton = By.id("login-button");
-
-    public ProductsPage(WebDriver driver) {
-        this.driver = driver;
-        this.wait = new WebDriverWait(driver, Duration.ofSeconds(10));
-    }
-
-    public boolean isOnProductsPage() {
-        boolean urlOk = wait.until(ExpectedConditions.urlContains("inventory.html"));
-        boolean headerOk = wait.until(ExpectedConditions.textToBePresentInElementLocated(productsHeader, "Products"));
-        return urlOk && headerOk;
+    public boolean isAt() {
+        return driver.getCurrentUrl().contains("inventory.html");
     }
 
     public void addFirstProductToCart() {
-        wait.until(ExpectedConditions.elementToBeClickable(firstAddToCartBtn)).click();
-    }
-
-    public boolean isProductAddedToCart() {
-        return wait.until(ExpectedConditions.visibilityOfElementLocated(cartBadge)).isDisplayed();
+        driver.findElement(firstAddToCart).click();
     }
 
     public void navigateToCart() {
-        wait.until(ExpectedConditions.elementToBeClickable(cartIcon)).click();
+        driver.findElement(cartIcon).click();
     }
 
     public void clickCheckout() {
-        wait.until(ExpectedConditions.elementToBeClickable(checkoutButton)).click();
+        // assumes you're on the cart page after navigateToCart()
+        driver.findElement(checkoutBtn).click();
     }
 
-    public void logout() {
-        wait.until(ExpectedConditions.elementToBeClickable(menuButton)).click();
-        wait.until(ExpectedConditions.elementToBeClickable(logoutLink)).click();
-        wait.until(ExpectedConditions.visibilityOfElementLocated(loginButton));
-    }
-
-    public boolean isOnLoginPage() {
-        return wait.until(ExpectedConditions.visibilityOfElementLocated(loginButton)).isDisplayed();
+    public boolean isProductAddedToCart() {
+        // cart badge exists when >= 1 item
+        return !driver.findElements(By.cssSelector(".shopping_cart_badge")).isEmpty();
     }
 }

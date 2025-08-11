@@ -1,21 +1,20 @@
 package hooks;
 
-import com.aventstack.extentreports.ExtentTest;
-import io.cucumber.java.AfterStep;
-import io.cucumber.java.Scenario;
+import com.aventstack.extentreports.Status;
+import io.cucumber.java.*;
 import utils.ExtentManager;
 
 public class StepListener {
 
     @AfterStep
     public void afterStep(Scenario scenario) {
-        ExtentTest test = ExtentManager.getTest();
-        if (test == null) return; // prevents NPE if @Before didn’t run
+        var test = ExtentManager.getTest();
+        if (test == null) return; // prevent NPEs
 
-        switch (scenario.getStatus()) {
-            case PASSED -> test.info("Step passed");
-            case FAILED -> test.fail("Step failed");
-            default -> test.info("Step status: " + scenario.getStatus());
+        if (scenario.isFailed()) {
+            test.log(Status.FAIL, "Step failed");
+        } else {
+            test.log(Status.PASS, "Step passed");
         }
     }
 }
