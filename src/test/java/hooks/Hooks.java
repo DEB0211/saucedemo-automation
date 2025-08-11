@@ -1,32 +1,31 @@
 package hooks;
 
-import io.cucumber.java.After;
-import io.cucumber.java.Before;
-import io.cucumber.java.Scenario;
+import io.cucumber.java.*;
 import org.openqa.selenium.OutputType;
 import org.openqa.selenium.TakesScreenshot;
 import utils.DriverFactory;
+import utils.ExtentManager;
 
 public class Hooks {
 
-    @Before
+    // Ensure WebDriver exists before any step runs
+    @Before(order = -100)
     public void setUp() {
         DriverFactory.initDriver();
     }
 
-    @After
+    // Keep your teardown & screenshot on failure
+    @After(order = 100)
     public void tearDown(Scenario scenario) {
         try {
             if (scenario.isFailed()) {
-                byte[] shot = ((TakesScreenshot) DriverFactory.getDriver()).getScreenshotAs(OutputType.BYTES);
-                scenario.attach(shot, "image/png", scenario.getName());
-                // You can also attach to Extent if desired:
-                var test = utils.ExtentManager.getTest();
+                byte[] png = ((TakesScreenshot) DriverFactory.getDriver()).getScreenshotAs(OutputType.BYTES);
+                scenario.attach(png, "image/png", scenario.getName());
+
+                var test = ExtentManager.getTest();
                 if (test != null) {
-                    test.addScreenCaptureFromBase64String(
-                            ((TakesScreenshot) DriverFactory.getDriver()).getScreenshotAs(OutputType.BASE64),
-                            "Failure screenshot"
-                    );
+                    String b64 = ((TakesScreenshot) DriverFactory.getDriver()).getScreenshotAs(OutputType.BASE64);
+                    test.addScreenCaptureFromBase64String(b64, "Failure screenshot");
                 }
             }
         } catch (Exception ignored) {}

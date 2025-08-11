@@ -13,35 +13,21 @@ public class ExtentManager {
     public static synchronized ExtentReports getExtent() {
         if (extent == null) {
             String ts = new SimpleDateFormat("yyyyMMdd_HHmmss").format(new Date());
-            String reportPath = "target/extent/ExtentReport_" + ts + ".html";
-
-            ExtentSparkReporter spark = new ExtentSparkReporter(reportPath);
+            ExtentSparkReporter spark = new ExtentSparkReporter("target/extent/ExtentReport_" + ts + ".html");
             spark.config().setDocumentTitle("SauceDemo Automation Report");
             spark.config().setReportName("UI Suite");
 
             extent = new ExtentReports();
             extent.attachReporter(spark);
 
-            // System info (from config + JVM)
-            String os = System.getProperty("os.name");
-            String jv = System.getProperty("java.version");
-            String browser = ConfigReader.getProperty("browser");
-            extent.setSystemInfo("OS", os);
-            extent.setSystemInfo("Java", jv);
-            extent.setSystemInfo("Browser", browser);
+            extent.setSystemInfo("OS", System.getProperty("os.name"));
+            extent.setSystemInfo("Java", System.getProperty("java.version"));
+            extent.setSystemInfo("Browser", ConfigReader.getProperty("browser"));
         }
         return extent;
     }
 
-    public static void setTest(com.aventstack.extentreports.ExtentTest test) {
-        TL_TEST.set(test);
-    }
-
-    public static com.aventstack.extentreports.ExtentTest getTest() {
-        return TL_TEST.get();
-    }
-
-    public static void clearTest() {
-        TL_TEST.remove();
-    }
+    public static void setTest(com.aventstack.extentreports.ExtentTest test) { TL_TEST.set(test); }
+    public static com.aventstack.extentreports.ExtentTest getTest() { return TL_TEST.get(); }
+    public static void clearTest() { TL_TEST.remove(); }
 }
