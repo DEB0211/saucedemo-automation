@@ -55,11 +55,11 @@ function toggleAllBoxes() {
 <body>
 <h2 align='center'>Surefire test</h2><table border='1' align="center">
 <tr>
-<td>Tests passed/Failed/Skipped:</td><td>3/0/0</td>
+<td>Tests passed/Failed/Skipped:</td><td>0/5/0</td>
 </tr><tr>
-<td>Started on:</td><td>Fri Aug 08 02:03:19 IST 2025</td>
+<td>Started on:</td><td>Mon Aug 11 08:10:46 IST 2025</td>
 </tr>
-<tr><td>Total time:</td><td>10 seconds (10800 ms)</td>
+<tr><td>Total time:</td><td>6 seconds (6156 ms)</td>
 </tr><tr>
 <td>Included groups:</td><td></td>
 </tr><tr>
@@ -67,8 +67,8 @@ function toggleAllBoxes() {
 </tr>
 </table><p/>
 <small><i>(Hover the method name to see the test class name)</i></small><p/>
-<table width='100%' border='1' class='invocation-passed'>
-<tr><td colspan='4' align='center'><b>PASSED TESTS</b></td></tr>
+<table width='100%' border='1' class='invocation-failed'>
+<tr><td colspan='4' align='center'><b>FAILED TESTS</b></td></tr>
 <tr><td><b>Test method</b></td>
 <td><b>Attribute(s)</b></td>
 <td width="30%"><b>Exception</b></td>
@@ -76,19 +76,54 @@ function toggleAllBoxes() {
 <td><b>Instance</b></td>
 </tr>
 <tr>
-<td title='runners.TestRunner.runScenario()'><b>runScenario</b><br>Test class: runners.TestRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Invalid login attempt", "Login functionality"</td>
-<td></td>
-<td>8</td>
+<td title='runners.TestRunner.runScenario()'><b>runScenario</b><br>Test class: runners.TestRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Add first product to cart", "Add to cart"</td>
+<td><div><pre>java.lang.NullPointerException: Cannot invoke &quot;com.aventstack.extentreports.ExtentTest.log(com.aventstack.extentreports.Status, String)&quot; because &quot;test&quot; is null
+	at hooks.StepListener.afterStep(StepListener.java:32)
+</pre></div><a href='#' onClick='toggleBox("stack-trace1969923755", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace1969923755'><pre>java.lang.NullPointerException: Cannot invoke &quot;com.aventstack.extentreports.ExtentTest.log(com.aventstack.extentreports.Status, String)&quot; because &quot;test&quot; is null
+	at hooks.StepListener.afterStep(StepListener.java:32)
+</pre></div></td>
+<td>4</td>
 <td>runners.TestRunner@48aaecc3</td></tr>
 <tr>
-<td title='runners.TestRunner.runScenario()'><b>runScenario</b><br>Test class: runners.TestRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Valid user can login and logout", "Login functionality"</td>
-<td></td>
-<td>9</td>
+<td title='runners.TestRunner.runScenario()'><b>runScenario</b><br>Test class: runners.TestRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Complete a product checkout", "Checkout Process"</td>
+<td><div><pre>java.lang.NullPointerException: Cannot invoke &quot;com.aventstack.extentreports.ExtentTest.log(com.aventstack.extentreports.Status, String)&quot; because &quot;test&quot; is null
+	at hooks.StepListener.afterStep(StepListener.java:32)
+</pre></div><a href='#' onClick='toggleBox("stack-trace785697589", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace785697589'><pre>java.lang.NullPointerException: Cannot invoke &quot;com.aventstack.extentreports.ExtentTest.log(com.aventstack.extentreports.Status, String)&quot; because &quot;test&quot; is null
+	at hooks.StepListener.afterStep(StepListener.java:32)
+</pre></div></td>
+<td>5</td>
 <td>runners.TestRunner@48aaecc3</td></tr>
 <tr>
-<td title='runners.TestRunner.runScenario()'><b>runScenario</b><br>Test class: runners.TestRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Add a product to cart", "Add Products to Cart"</td>
-<td></td>
-<td>10</td>
+<td title='runners.TestRunner.runScenario()'><b>runScenario</b><br>Test class: runners.TestRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Valid login", "Login"</td>
+<td><div><pre>java.lang.NullPointerException: Cannot invoke &quot;com.aventstack.extentreports.ExtentTest.log(com.aventstack.extentreports.Status, String)&quot; because &quot;test&quot; is null
+	at hooks.StepListener.afterStep(StepListener.java:32)
+</pre></div><a href='#' onClick='toggleBox("stack-trace1831345291", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace1831345291'><pre>java.lang.NullPointerException: Cannot invoke &quot;com.aventstack.extentreports.ExtentTest.log(com.aventstack.extentreports.Status, String)&quot; because &quot;test&quot; is null
+	at hooks.StepListener.afterStep(StepListener.java:32)
+</pre></div></td>
+<td>5</td>
+<td>runners.TestRunner@48aaecc3</td></tr>
+<tr>
+<td title='runners.TestRunner.runScenario()'><b>runScenario</b><br>Test class: runners.TestRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Invalid login shows error", "Login"</td>
+<td><div><pre>java.lang.NullPointerException: Cannot invoke &quot;com.aventstack.extentreports.ExtentTest.log(com.aventstack.extentreports.Status, String)&quot; because &quot;test&quot; is null
+	at hooks.StepListener.afterStep(StepListener.java:32)
+</pre></div><a href='#' onClick='toggleBox("stack-trace215400960", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace215400960'><pre>java.lang.NullPointerException: Cannot invoke &quot;com.aventstack.extentreports.ExtentTest.log(com.aventstack.extentreports.Status, String)&quot; because &quot;test&quot; is null
+	at hooks.StepListener.afterStep(StepListener.java:32)
+</pre></div></td>
+<td>5</td>
+<td>runners.TestRunner@48aaecc3</td></tr>
+<tr>
+<td title='runners.TestRunner.runScenario()'><b>runScenario</b><br>Test class: runners.TestRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Invalid login shows error", "Login"</td>
+<td><div><pre>java.lang.NullPointerException: Cannot invoke &quot;com.aventstack.extentreports.ExtentTest.log(com.aventstack.extentreports.Status, String)&quot; because &quot;test&quot; is null
+	at hooks.StepListener.afterStep(StepListener.java:32)
+</pre></div><a href='#' onClick='toggleBox("stack-trace180265057", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace180265057'><pre>java.lang.NullPointerException: Cannot invoke &quot;com.aventstack.extentreports.ExtentTest.log(com.aventstack.extentreports.Status, String)&quot; because &quot;test&quot; is null
+	at hooks.StepListener.afterStep(StepListener.java:32)
+</pre></div></td>
+<td>4</td>
 <td>runners.TestRunner@48aaecc3</td></tr>
 </table><p>
 </body>

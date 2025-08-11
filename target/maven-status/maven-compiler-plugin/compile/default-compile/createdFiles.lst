@@ -1,6 +1,8 @@
 utils/ConfigReader.class
+pages/CheckoutPage.class
+utils/ExtentManager.class
+utils/WaitUtils.class
 utils/TestUtils.class
-utils/ExtentReportManager.class
 utils/LoggerUtil.class
 pages/ProductsPage.class
 pages/LoginPage.class

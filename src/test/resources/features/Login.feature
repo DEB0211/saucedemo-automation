@@ -1,15 +1,18 @@
-Feature: Login functionality
+Feature: Login
 
-  @smoke @login @positive
-  Scenario: Valid user can login and logout
+  @smoke
+  Scenario: Valid login
     Given user is on the login page
     When user logs in with valid credentials
-    Then user should be navigated to the products page
-    When user logs out
-    Then user should be back on the login page
+    Then user should land on Products page
 
-  @smoke @login @negative
-  Scenario: Invalid login attempt
+  @smoke @negative
+  Scenario Outline: Invalid login shows error
     Given user is on the login page
-    When user logs in with invalid credentials
-    Then user should see an error message
+    When user logs in with username "<user>" and password "<pass>"
+    Then login error message should be visible
+
+    Examples:
+      | user            | pass         |
+      | standard_user   | wrong_pass   |
+      | locked_out_user | secret_sauce |

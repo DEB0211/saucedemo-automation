@@ -8,40 +8,38 @@ import java.time.Duration;
 import java.util.Map;
 
 public class DriverFactory {
-    private static final ThreadLocal<WebDriver> tlDriver = new ThreadLocal<>();
+    private static final ThreadLocal<WebDriver> TL_DRIVER = new ThreadLocal<>();
 
     public static WebDriver initDriver() {
-        if (tlDriver.get() == null) {
-            String browser = ConfigReader.getProperty("browser").toLowerCase();
+        if (TL_DRIVER.get() == null) {
+            WebDriver driver;
+            String browser = String.valueOf(ConfigReader.getProperty("browser")).toLowerCase();
 
-            if (browser.equals("chrome")) {
-                ChromeOptions options = new ChromeOptions();
-                options.addArguments("--disable-notifications", "--incognito");
-                options.setExperimentalOption("prefs", Map.of(
-                        "credentials_enable_service", false,
-                        "profile.password_manager_enabled", false
-                ));
-                WebDriver driver = new ChromeDriver(options);
-                driver.manage().window().maximize();
-                driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(10));
-                tlDriver.set(driver);
-            }
-            // You can add Firefox, Edge support here later
-            else {
-                throw new RuntimeException("Unsupported browser: " + browser);
-            }
+            // Extend here for firefox/edge if needed
+            ChromeOptions options = new ChromeOptions();
+            options.addArguments("--disable-notifications", "--incognito");
+            options.setExperimentalOption("prefs", Map.of(
+                    "credentials_enable_service", false,
+                    "profile.password_manager_enabled", false
+            ));
+            driver = new ChromeDriver(options);
+
+            driver.manage().window().maximize();
+            driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(5));
+            TL_DRIVER.set(driver);
         }
-        return tlDriver.get();
+        return TL_DRIVER.get();
     }
 
     public static WebDriver getDriver() {
-        return tlDriver.get();
+        return TL_DRIVER.get();
     }
 
     public static void quitDriver() {
-        if (tlDriver.get() != null) {
-            tlDriver.get().quit();
-            tlDriver.remove();
+        WebDriver driver = TL_DRIVER.get();
+        if (driver != null) {
+            driver.quit();
+            TL_DRIVER.remove();
         }
     }
 }

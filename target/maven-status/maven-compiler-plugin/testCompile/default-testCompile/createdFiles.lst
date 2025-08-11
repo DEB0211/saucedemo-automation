@@ -1,7 +1,10 @@
 utils/RetryAnalyzer.class
-stepdefs/AddToCartSteps.class
+hooks/ExtentHooks.class
 runners/TestRunner.class
 hooks/StepListener.class
 utils/RetryListener.class
+hooks/ExtentHooks$1.class
 hooks/Hooks.class
 stepdefs/LoginSteps.class
+stepdefs/CartSteps.class
+stepdefs/CheckoutSteps.class

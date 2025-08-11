@@ -1,7 +1,9 @@
 /Users/zop8764/Documents/Repo/saucedemo-automation/src/test/java/runners/TestRunner.java
 /Users/zop8764/Documents/Repo/saucedemo-automation/src/test/java/hooks/StepListener.java
-/Users/zop8764/Documents/Repo/saucedemo-automation/src/test/java/stepdefs/AddToCartSteps.java
+/Users/zop8764/Documents/Repo/saucedemo-automation/src/test/java/stepdefs/CheckoutSteps.java
 /Users/zop8764/Documents/Repo/saucedemo-automation/src/test/java/hooks/Hooks.java
 /Users/zop8764/Documents/Repo/saucedemo-automation/src/test/java/utils/RetryAnalyzer.java
 /Users/zop8764/Documents/Repo/saucedemo-automation/src/test/java/utils/RetryListener.java
+/Users/zop8764/Documents/Repo/saucedemo-automation/src/test/java/hooks/ExtentHooks.java
+/Users/zop8764/Documents/Repo/saucedemo-automation/src/test/java/stepdefs/CartSteps.java
 /Users/zop8764/Documents/Repo/saucedemo-automation/src/test/java/stepdefs/LoginSteps.java

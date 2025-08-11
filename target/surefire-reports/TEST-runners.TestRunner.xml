@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="https://maven.apache.org/surefire/maven-surefire-plugin/xsd/surefire-test-report-3.0.xsd" version="3.0" name="runners.TestRunner" time="15.993" tests="3" errors="0" skipped="0" failures="0">
+<testsuite xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="https://maven.apache.org/surefire/maven-surefire-plugin/xsd/surefire-test-report-3.0.xsd" version="3.0" name="runners.TestRunner" time="6.337" tests="5" errors="0" skipped="0" failures="5">
   <properties>
     <property name="java.specification.version" value="21"/>
     <property name="sun.jnu.encoding" value="UTF-8"/>
@@ -8,13 +8,13 @@
     <property name="sun.arch.data.model" value="64"/>
     <property name="java.vendor.url" value="https://github.com/Homebrew/homebrew-core/issues"/>
     <property name="user.timezone" value="Asia/Kolkata"/>
-    <property name="cucumber.execution.parallel.enabled" value="true"/>
+    <property name="cucumber.execution.parallel.enabled" value="false"/>
     <property name="os.name" value="Mac OS X"/>
     <property name="java.vm.specification.version" value="21"/>
     <property name="sun.java.launcher" value="SUN_STANDARD"/>
     <property name="user.country" value="US"/>
     <property name="sun.boot.library.path" value="/opt/homebrew/Cellar/openjdk@21/21.0.7/libexec/openjdk.jdk/Contents/Home/lib"/>
-    <property name="sun.java.command" value="/Users/zop8764/Documents/Repo/saucedemo-automation/target/surefire/surefirebooter-20250808020319651_3.jar /Users/zop8764/Documents/Repo/saucedemo-automation/target/surefire 2025-08-08T02-03-19_606-jvmRun1 surefire-20250808020319651_1tmp surefire_0-20250808020319651_2tmp"/>
+    <property name="sun.java.command" value="/Users/zop8764/Documents/Repo/saucedemo-automation/target/surefire/surefirebooter-20250811081046072_3.jar /Users/zop8764/Documents/Repo/saucedemo-automation/target/surefire 2025-08-11T08-10-46_031-jvmRun1 surefire-20250811081046072_1tmp surefire_0-20250811081046072_2tmp"/>
     <property name="http.nonProxyHosts" value="local|*.local|169.254/16|*.169.254/16|vpn-hdc.kroger.com|*.vpn-hdc.kroger.com|vpn-cdc.kroger.com|*.vpn-cdc.kroger.com|remoteaccessazure.kroger.com|*.remoteaccessazure.kroger.com"/>
     <property name="jdk.debug" value="release"/>
     <property name="surefire.test.class.path" value="/Users/zop8764/Documents/Repo/saucedemo-automation/target/test-classes:/Users/zop8764/Documents/Repo/saucedemo-automation/target/classes:/Users/zop8764/.m2/repository/org/seleniumhq/selenium/selenium-java/4.34.0/selenium-java-4.34.0.jar:/Users/zop8764/.m2/repository/org/seleniumhq/selenium/selenium-api/4.34.0/selenium-api-4.34.0.jar:/Users/zop8764/.m2/repository/org/jspecify/jspecify/1.0.0/jspecify-1.0.0.jar:/Users/zop8764/.m2/repository/org/seleniumhq/selenium/selenium-chrome-driver/4.34.0/selenium-chrome-driver-4.34.0.jar:/Users/zop8764/.m2/repository/com/google/auto/service/auto-service-annotations/1.1.1/auto-service-annotations-1.1.1.jar:/Users/zop8764/.m2/repository/org/seleniumhq/selenium/selenium-chromium-driver/4.34.0/selenium-chromium-driver-4.34.0.jar:/Users/zop8764/.m2/repository/org/seleniumhq/selenium/selenium-json/4.34.0/selenium-json-4.34.0.jar:/Users/zop8764/.m2/repository/org/seleniumhq/selenium/selenium-manager/4.34.0/selenium-manager-4.34.0.jar:/Users/zop8764/.m2/repository/org/seleniumhq/selenium/selenium-devtools-v136/4.34.0/selenium-devtools-v136-4.34.0.jar:/Users/zop8764/.m2/repository/org/seleniumhq/selenium/selenium-devtools-v137/4.34.0/selenium-devtools-v137-4.34.0.jar:/Users/zop8764/.m2/repository/org/seleniumhq/selenium/selenium-devtools-v138/4.34.0/selenium-devtools-v138-4.34.0.jar:/Users/zop8764/.m2/repository/org/seleniumhq/selenium/selenium-edge-driver/4.34.0/selenium-edge-driver-4.34.0.jar:/Users/zop8764/.m2/repository/org/seleniumhq/selenium/selenium-firefox-driver/4.34.0/selenium-firefox-driver-4.34.0.jar:/Users/zop8764/.m2/repository/org/seleniumhq/selenium/selenium-http/4.34.0/selenium-http-4.34.0.jar:/Users/zop8764/.m2/repository/org/seleniumhq/selenium/selenium-ie-driver/4.34.0/selenium-ie-driver-4.34.0.jar:/Users/zop8764/.m2/repository/org/seleniumhq/selenium/selenium-remote-driver/4.34.0/selenium-remote-driver-4.34.0.jar:/Users/zop8764/.m2/repository/com/google/guava/guava/33.4.8-jre/guava-33.4.8-jre.jar:/Users/zop8764/.m2/repository/com/google/guava/failureaccess/1.0.3/failureaccess-1.0.3.jar:/Users/zop8764/.m2/repository/com/google/guava/listenablefuture/9999.0-empty-to-avoid-conflict-with-guava/listenablefuture-9999.0-empty-to-avoid-conflict-with-guava.jar:/Users/zop8764/.m2/repository/com/google/errorprone/error_prone_annotations/2.36.0/error_prone_annotations-2.36.0.jar:/Users/zop8764/.m2/repository/com/google/j2objc/j2objc-annotations/3.0.0/j2objc-annotations-3.0.0.jar:/Users/zop8764/.m2/repository/io/opentelemetry/opentelemetry-api/1.51.0/opentelemetry-api-1.51.0.jar:/Users/zop8764/.m2/repository/io/opentelemetry/opentelemetry-context/1.51.0/opentelemetry-context-1.51.0.jar:/Users/zop8764/.m2/repository/io/opentelemetry/opentelemetry-exporter-logging/1.51.0/opentelemetry-exporter-logging-1.51.0.jar:/Users/zop8764/.m2/repository/io/opentelemetry/opentelemetry-sdk-common/1.51.0/opentelemetry-sdk-common-1.51.0.jar:/Users/zop8764/.m2/repository/io/opentelemetry/opentelemetry-sdk-extension-autoconfigure-spi/1.51.0/opentelemetry-sdk-extension-autoconfigure-spi-1.51.0.jar:/Users/zop8764/.m2/repository/io/opentelemetry/opentelemetry-sdk-extension-autoconfigure/1.51.0/opentelemetry-sdk-extension-autoconfigure-1.51.0.jar:/Users/zop8764/.m2/repository/io/opentelemetry/opentelemetry-sdk-trace/1.51.0/opentelemetry-sdk-trace-1.51.0.jar:/Users/zop8764/.m2/repository/io/opentelemetry/opentelemetry-sdk/1.51.0/opentelemetry-sdk-1.51.0.jar:/Users/zop8764/.m2/repository/io/opentelemetry/opentelemetry-sdk-metrics/1.51.0/opentelemetry-sdk-metrics-1.51.0.jar:/Users/zop8764/.m2/repository/io/opentelemetry/opentelemetry-sdk-logs/1.51.0/opentelemetry-sdk-logs-1.51.0.jar:/Users/zop8764/.m2/repository/net/bytebuddy/byte-buddy/1.17.6/byte-buddy-1.17.6.jar:/Users/zop8764/.m2/repository/org/seleniumhq/selenium/selenium-os/4.34.0/selenium-os-4.34.0.jar:/Users/zop8764/.m2/repository/org/apache/commons/commons-exec/1.5.0/commons-exec-1.5.0.jar:/Users/zop8764/.m2/repository/org/seleniumhq/selenium/selenium-safari-driver/4.34.0/selenium-safari-driver-4.34.0.jar:/Users/zop8764/.m2/repository/org/seleniumhq/selenium/selenium-support/4.34.0/selenium-support-4.34.0.jar:/Users/zop8764/.m2/repository/io/cucumber/cucumber-java/7.27.0/cucumber-java-7.27.0.jar:/Users/zop8764/.m2/repository/io/cucumber/cucumber-core/7.27.0/cucumber-core-7.27.0.jar:/Users/zop8764/.m2/repository/io/cucumber/cucumber-gherkin/7.27.0/cucumber-gherkin-7.27.0.jar:/Users/zop8764/.m2/repository/io/cucumber/cucumber-gherkin-messages/7.27.0/cucumber-gherkin-messages-7.27.0.jar:/Users/zop8764/.m2/repository/io/cucumber/gherkin/33.1.0/gherkin-33.1.0.jar:/Users/zop8764/.m2/repository/io/cucumber/messages/28.1.0/messages-28.1.0.jar:/Users/zop8764/.m2/repository/io/cucumber/pretty-formatter/2.0.1/pretty-formatter-2.0.1.jar:/Users/zop8764/.m2/repository/io/cucumber/query/13.5.0/query-13.5.0.jar:/Users/zop8764/.m2/repository/io/cucumber/testng-xml-formatter/0.5.0/testng-xml-formatter-0.5.0.jar:/Users/zop8764/.m2/repository/io/cucumber/tag-expressions/6.1.2/tag-expressions-6.1.2.jar:/Users/zop8764/.m2/repository/io/cucumber/cucumber-expressions/18.0.1/cucumber-expressions-18.0.1.jar:/Users/zop8764/.m2/repository/io/cucumber/datatable/7.27.0/datatable-7.27.0.jar:/Users/zop8764/.m2/repository/io/cucumber/cucumber-plugin/7.27.0/cucumber-plugin-7.27.0.jar:/Users/zop8764/.m2/repository/io/cucumber/docstring/7.27.0/docstring-7.27.0.jar:/Users/zop8764/.m2/repository/io/cucumber/html-formatter/21.13.0/html-formatter-21.13.0.jar:/Users/zop8764/.m2/repository/io/cucumber/junit-xml-formatter/0.8.0/junit-xml-formatter-0.8.0.jar:/Users/zop8764/.m2/repository/io/cucumber/ci-environment/10.0.1/ci-environment-10.0.1.jar:/Users/zop8764/.m2/repository/org/apiguardian/apiguardian-api/1.1.2/apiguardian-api-1.1.2.jar:/Users/zop8764/.m2/repository/io/cucumber/cucumber-testng/7.27.0/cucumber-testng-7.27.0.jar:/Users/zop8764/.m2/repository/org/testng/testng/7.11.0/testng-7.11.0.jar:/Users/zop8764/.m2/repository/org/slf4j/slf4j-api/2.0.16/slf4j-api-2.0.16.jar:/Users/zop8764/.m2/repository/org/jcommander/jcommander/1.83/jcommander-1.83.jar:/Users/zop8764/.m2/repository/org/webjars/jquery/3.7.1/jquery-3.7.1.jar:/Users/zop8764/.m2/repository/com/aventstack/extentreports/5.0.9/extentreports-5.0.9.jar:/Users/zop8764/.m2/repository/io/reactivex/rxjava3/rxjava/3.0.4/rxjava-3.0.4.jar:/Users/zop8764/.m2/repository/org/reactivestreams/reactive-streams/1.0.3/reactive-streams-1.0.3.jar:/Users/zop8764/.m2/repository/org/freemarker/freemarker/2.3.30/freemarker-2.3.30.jar:/Users/zop8764/.m2/repository/com/google/code/gson/gson/2.8.6/gson-2.8.6.jar:/Users/zop8764/.m2/repository/org/projectlombok/lombok/1.18.30/lombok-1.18.30.jar:"/>
@@ -31,7 +31,7 @@
     <property name="java.vm.specification.vendor" value="Oracle Corporation"/>
     <property name="java.specification.name" value="Java Platform API Specification"/>
     <property name="apple.awt.application.name" value="ForkedBooter"/>
-    <property name="surefire.real.class.path" value="/Users/zop8764/Documents/Repo/saucedemo-automation/target/surefire/surefirebooter-20250808020319651_3.jar"/>
+    <property name="surefire.real.class.path" value="/Users/zop8764/Documents/Repo/saucedemo-automation/target/surefire/surefirebooter-20250811081046072_3.jar"/>
     <property name="sun.management.compiler" value="HotSpot 64-Bit Tiered Compilers"/>
     <property name="ftp.nonProxyHosts" value="local|*.local|169.254/16|*.169.254/16|vpn-hdc.kroger.com|*.vpn-hdc.kroger.com|vpn-cdc.kroger.com|*.vpn-cdc.kroger.com|remoteaccessazure.kroger.com|*.remoteaccessazure.kroger.com"/>
     <property name="java.runtime.version" value="21.0.7"/>
@@ -61,37 +61,99 @@
     <property name="socksNonProxyHosts" value="local|*.local|169.254/16|*.169.254/16|vpn-hdc.kroger.com|*.vpn-hdc.kroger.com|vpn-cdc.kroger.com|*.vpn-cdc.kroger.com|remoteaccessazure.kroger.com|*.remoteaccessazure.kroger.com"/>
     <property name="java.class.version" value="65.0"/>
   </properties>
-  <testcase name="runScenario[&quot;Invalid login attempt&quot;, &quot;Login functionality&quot;](1)" classname="runners.TestRunner" time="8.502">
+  <testcase name="runScenario[&quot;Add first product to cart&quot;, &quot;Add to cart&quot;](2)" classname="runners.TestRunner" time="4.883">
+    <failure message="Cannot invoke &quot;com.aventstack.extentreports.ExtentTest.log(com.aventstack.extentreports.Status, String)&quot; because &quot;test&quot; is null" type="java.lang.NullPointerException"><![CDATA[java.lang.NullPointerException: Cannot invoke "com.aventstack.extentreports.ExtentTest.log(com.aventstack.extentreports.Status, String)" because "test" is null
+	at hooks.StepListener.afterStep(StepListener.java:32)
+]]></failure>
     <system-out><![CDATA[
+@smoke @negative
+Scenario Outline: Invalid login shows error                                   # file:///Users/zop8764/Documents/Repo/saucedemo-automation/src/test/resources/features/Login.feature:17
+
 @smoke
-Scenario: Add a product to cart                    # file:///Users/zop8764/Documents/Repo/saucedemo-automation/src/test/resources/features/AddToCart.feature:4
+Scenario: Valid login                        # file:///Users/zop8764/Documents/Repo/saucedemo-automation/src/test/resources/features/Login.feature:4
 
-@smoke @login @positive
-Scenario: Valid user can login and logout              # file:///Users/zop8764/Documents/Repo/saucedemo-automation/src/test/resources/features/Login.feature:4
+@smoke @regression
+Scenario: Complete a product checkout         # file:///Users/zop8764/Documents/Repo/saucedemo-automation/src/test/resources/features/Checkout.feature:4
 
-@smoke @login @negative
-Scenario: Invalid login attempt                # file:///Users/zop8764/Documents/Repo/saucedemo-automation/src/test/resources/features/Login.feature:12
-  ✔ Given user is on the login page            # stepdefs.LoginSteps.userIsOnLoginPage()
-  ✔ When user logs in with invalid credentials # stepdefs.LoginSteps.userLogsInInvalid()
-  ✔ Then user should see an error message      # stepdefs.LoginSteps.userSeesErrorMessage()
+@smoke @negative
+Scenario Outline: Invalid login shows error                                       # file:///Users/zop8764/Documents/Repo/saucedemo-automation/src/test/resources/features/Login.feature:18
+
+@smoke
+Scenario: Add first product to cart          # file:///Users/zop8764/Documents/Repo/saucedemo-automation/src/test/resources/features/AddToCart.feature:4
+  ✔ Given user is on the login page                                               # stepdefs.LoginSteps.user_is_on_the_login_page()
+        java.lang.NullPointerException: Cannot invoke "com.aventstack.extentreports.ExtentTest.log(com.aventstack.extentreports.Status, String)" because "test" is null
+        	at hooks.StepListener.afterStep(StepListener.java:32)
+  ↷ When user logs in with username "locked_out_user" and password "secret_sauce" # stepdefs.LoginSteps.user_logs_in_with_username_and_password(java.lang.String,java.lang.String)
+  ↷ Then login error message should be visible                                    # stepdefs.LoginSteps.login_error_message_should_be_visible()
+  ✔ Given user is on the login page          # stepdefs.LoginSteps.user_is_on_the_login_page()
+        java.lang.NullPointerException: Cannot invoke "com.aventstack.extentreports.ExtentTest.log(com.aventstack.extentreports.Status, String)" because "test" is null
+        	at hooks.StepListener.afterStep(StepListener.java:32)
+  ↷ When user logs in with valid credentials # stepdefs.LoginSteps.user_logs_in_with_valid_credentials()
+  ↷ Then user should land on Products page   # stepdefs.LoginSteps.user_should_land_on_products_page()
+  ↷ And user adds the first product to cart  # stepdefs.CartSteps.user_adds_the_first_product_to_cart()
+  ↷ And user navigates to cart               # stepdefs.CartSteps.user_navigates_to_cart()
+
+        Embedding Invalid login shows error [image/png 83820 bytes]
+
+
+        Embedding Add first product to cart [image/png 83820 bytes]
+
+  ✔ Given user is on the login page                                           # stepdefs.LoginSteps.user_is_on_the_login_page()
+        java.lang.NullPointerException: Cannot invoke "com.aventstack.extentreports.ExtentTest.log(com.aventstack.extentreports.Status, String)" because "test" is null
+        	at hooks.StepListener.afterStep(StepListener.java:32)
+  ↷ When user logs in with username "standard_user" and password "wrong_pass" # stepdefs.LoginSteps.user_logs_in_with_username_and_password(java.lang.String,java.lang.String)
+  ↷ Then login error message should be visible                                # stepdefs.LoginSteps.login_error_message_should_be_visible()
+  ✔ Given user is on the login page          # stepdefs.LoginSteps.user_is_on_the_login_page()
+        java.lang.NullPointerException: Cannot invoke "com.aventstack.extentreports.ExtentTest.log(com.aventstack.extentreports.Status, String)" because "test" is null
+        	at hooks.StepListener.afterStep(StepListener.java:32)
+  ↷ When user logs in with valid credentials # stepdefs.LoginSteps.user_logs_in_with_valid_credentials()
+  ↷ Then user should land on Products page   # stepdefs.LoginSteps.user_should_land_on_products_page()
+
+        Embedding Invalid login shows error [image/png 83820 bytes]
+
 ]]></system-out>
     <system-err><![CDATA[SLF4J(W): No SLF4J providers were found.
 SLF4J(W): Defaulting to no-operation (NOP) logger implementation
 SLF4J(W): See https://www.slf4j.org/codes.html#noProviders for further details.
 ]]></system-err>
   </testcase>
-  <testcase name="runScenario[&quot;Valid user can login and logout&quot;, &quot;Login functionality&quot;](2)" classname="runners.TestRunner" time="9.572">
-    <system-out><![CDATA[  ✔ Given user is on the login page                    # stepdefs.LoginSteps.userIsOnLoginPage()
-  ✔ When user logs in with valid credentials           # stepdefs.LoginSteps.userLogsInValid()
-  ✔ Then user should be navigated to the products page # stepdefs.LoginSteps.verifySuccessfulLogin()
-  ✔ When user logs out                                 # stepdefs.LoginSteps.userLogsOut()
-  ✔ Then user should be back on the login page         # stepdefs.LoginSteps.verifyLogoutSuccess()
+  <testcase name="runScenario[&quot;Invalid login shows error&quot;, &quot;Login&quot;](2)" classname="runners.TestRunner" time="4.886">
+    <failure message="Cannot invoke &quot;com.aventstack.extentreports.ExtentTest.log(com.aventstack.extentreports.Status, String)&quot; because &quot;test&quot; is null" type="java.lang.NullPointerException"><![CDATA[java.lang.NullPointerException: Cannot invoke "com.aventstack.extentreports.ExtentTest.log(com.aventstack.extentreports.Status, String)" because "test" is null
+	at hooks.StepListener.afterStep(StepListener.java:32)
+]]></failure>
+  </testcase>
+  <testcase name="runScenario[&quot;Valid login&quot;, &quot;Login&quot;](3)" classname="runners.TestRunner" time="5.302">
+    <failure message="Cannot invoke &quot;com.aventstack.extentreports.ExtentTest.log(com.aventstack.extentreports.Status, String)&quot; because &quot;test&quot; is null" type="java.lang.NullPointerException"><![CDATA[java.lang.NullPointerException: Cannot invoke "com.aventstack.extentreports.ExtentTest.log(com.aventstack.extentreports.Status, String)" because "test" is null
+	at hooks.StepListener.afterStep(StepListener.java:32)
+]]></failure>
+    <system-out><![CDATA[
+        Embedding Valid login [image/png 83820 bytes]
+
 ]]></system-out>
   </testcase>
-  <testcase name="runScenario[&quot;Add a product to cart&quot;, &quot;Add Products to Cart&quot;](3)" classname="runners.TestRunner" time="10.537">
-    <system-out><![CDATA[  ✔ Given user is logged in with valid credentials # stepdefs.AddToCartSteps.user_is_logged_in_with_valid_credentials()
-  ✔ When user adds the first product to cart       # stepdefs.AddToCartSteps.user_adds_the_first_product_to_cart()
-  ✔ Then user should see the product in the cart   # stepdefs.AddToCartSteps.user_should_see_the_product_in_the_cart()
+  <testcase name="runScenario[&quot;Invalid login shows error&quot;, &quot;Login&quot;](4)" classname="runners.TestRunner" time="5.305">
+    <failure message="Cannot invoke &quot;com.aventstack.extentreports.ExtentTest.log(com.aventstack.extentreports.Status, String)&quot; because &quot;test&quot; is null" type="java.lang.NullPointerException"><![CDATA[java.lang.NullPointerException: Cannot invoke "com.aventstack.extentreports.ExtentTest.log(com.aventstack.extentreports.Status, String)" because "test" is null
+	at hooks.StepListener.afterStep(StepListener.java:32)
+]]></failure>
+  </testcase>
+  <testcase name="runScenario[&quot;Complete a product checkout&quot;, &quot;Checkout Process&quot;](5)" classname="runners.TestRunner" time="5.89">
+    <failure message="Cannot invoke &quot;com.aventstack.extentreports.ExtentTest.log(com.aventstack.extentreports.Status, String)&quot; because &quot;test&quot; is null" type="java.lang.NullPointerException"><![CDATA[java.lang.NullPointerException: Cannot invoke "com.aventstack.extentreports.ExtentTest.log(com.aventstack.extentreports.Status, String)" because "test" is null
+	at hooks.StepListener.afterStep(StepListener.java:32)
+]]></failure>
+    <system-out><![CDATA[  ✔ Given user is on the login page           # stepdefs.LoginSteps.user_is_on_the_login_page()
+        java.lang.NullPointerException: Cannot invoke "com.aventstack.extentreports.ExtentTest.log(com.aventstack.extentreports.Status, String)" because "test" is null
+        	at hooks.StepListener.afterStep(StepListener.java:32)
+  ↷ When user logs in with valid credentials  # stepdefs.LoginSteps.user_logs_in_with_valid_credentials()
+  ↷ Then user should land on Products page    # stepdefs.LoginSteps.user_should_land_on_products_page()
+  ↷ And user adds the first product to cart   # stepdefs.CartSteps.user_adds_the_first_product_to_cart()
+  ↷ And user navigates to cart                # stepdefs.CartSteps.user_navigates_to_cart()
+  ↷ And user proceeds to checkout             # stepdefs.CheckoutSteps.user_proceeds_to_checkout()
+  ↷ When user provides valid checkout details # stepdefs.CheckoutSteps.user_provides_valid_checkout_details()
+  ↷ And user finishes the checkout            # stepdefs.CheckoutSteps.user_finishes_the_checkout()
+  ↷ Then user should see order confirmation   # stepdefs.CheckoutSteps.user_should_see_order_confirmation()
+
+        Embedding Complete a product checkout [image/png 83820 bytes]
+
 ]]></system-out>
   </testcase>
 </testsuite>
